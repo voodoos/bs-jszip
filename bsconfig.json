@@ -1,0 +1,11 @@
+{
+    "name": "bs-jszip",
+    "sources": {
+      "dir" : "src",
+      "subdirs" : false
+    },
+    "bsc-flags": [
+      "-bs-super-errors"
+    ],
+    "refmt": 3
+  }

@@ -1,0 +1,29 @@
+{
+    "name": "bs-jszip",
+    "version": "0.1.0",
+    "description": "Bucklescript bindings for JSZip",
+    "license": "MIT",
+    "keywords": [
+        "reason",
+        "react",
+        "bindings",
+        "js",
+        "zip",
+        "tools",
+        "jszip"
+    ],
+    "homepage": "https://github.com/voodoos/bs-jszip",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/voodoos/bs-jszip"
+    },
+    "bugs": {
+        "url": "https://github.com/voodoos/bs-jszip/issues"
+    },
+    "dependencies": {
+        "jszip": "^3.1.5"
+    },
+    "devDependencies": {
+        "bs-platform": "^2.2.3"
+    }
+}
