@@ -3,6 +3,8 @@
 
 A set of Bucklescript bindings for [JSZip](https://react.semantic-ui.com). 
 
+Required bindings for [Blob](https://developer.mozilla.org/fr/docs/Web/API/Blob) are also included.
+
 You can find a example usage of theses bindings in the ElpIDE project : [source](https://github.com/voodoos/ElpIDE/src/components/subcomponents/loadModal.re) || [demo](https://voodoos.github.io/ElpIDE/)
 
 ## Example usage
