@@ -1,7 +1,7 @@
 # bs-jszip
 
 
-A set of Bucklescript bindings for [JSZip](https://react.semantic-ui.com). 
+A set of Bucklescript bindings for [JSZip](https://stuk.github.io/jszip/). 
 
 Required bindings for [Blob](https://developer.mozilla.org/fr/docs/Web/API/Blob) are also included.
 
