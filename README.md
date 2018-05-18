@@ -7,7 +7,7 @@ You can find a example usage of theses bindings in the ElpIDE project : [source]
 
 ## Example usage
 
-```
+```reason
 let readZip = f =>
       /* Locally open zip module */
       Zip.(
