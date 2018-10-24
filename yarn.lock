@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-bs-platform@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-2.2.3.tgz#d905ae10a5f3621e6a739041dfa0b58483a2174f"
+bs-platform@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.6.tgz#e7f156c77ad3efafb0c0291b41dcf1b06f93c192"
 
 core-js@~2.3.0:
   version "2.3.0"

@@ -10,11 +10,11 @@ external create : unit => jszip = "jszip";
 [@bs.val] [@bs.module "jszip"]
 external support : {
   .
-  "arraybuffer": Js.boolean,
-  "uint8array": Js.boolean,
-  "blob": Js.boolean,
-  "nodebuffer": Js.boolean,
-  "nodestream": Js.boolean,
+  "arraybuffer": bool,
+  "uint8array": bool,
+  "blob": bool,
+  "nodebuffer": bool,
+  "nodestream": bool,
 } =
   "support";
 

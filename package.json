@@ -24,6 +24,11 @@
         "jszip": "^3.1.5"
     },
     "devDependencies": {
-        "bs-platform": "^2.2.3"
+        "bs-platform": "^4.0.6"
+    },
+    "scripts": {
+      "build": "bsb -make-world",
+      "clean": "bsb -clean-world",
+      "watch": "bsb -make-world -w"
     }
 }

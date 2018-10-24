@@ -14,26 +14,26 @@ type asyncUint8Options;
 
 /* Utilities to build the options */
 [@bs.obj]
-external makeWriteOptionsAux :
+external makeWriteOptionsAux:
   (
-    ~base64: Js.boolean=?,
-    ~binary: Js.boolean=?,
+    ~base64: bool=?,
+    ~binary: bool=?,
     ~date: Js.Date.t=?,
     ~compression: string=?,
     ~compressionOptions: cOptions=?,
     ~comment: string=?,
-    ~optimizedBinaryString: Js.boolean=?,
-    ~createFolders: Js.boolean=?,
+    ~optimizedBinaryString: bool=?,
+    ~createFolders: bool=?,
     ~unixPermissions: int=?,
     ~dosPermissions: int=?,
-    ~dir: Js.boolean=?,
+    ~dir: bool=?,
     unit
   ) =>
   wOptions =
   "";
 
 [@bs.obj]
-external makeCompressionOptionsAux : (~level: int=?, unit) => cOptions = "";
+external makeCompressionOptionsAux: (~level: int=?, unit) => cOptions = "";
 
 let makeWriteOptions =
     (
@@ -51,24 +51,24 @@ let makeWriteOptions =
       (),
     ) =>
   makeWriteOptionsAux(
-    ~base64=?fromBool(base64),
-    ~binary=?fromBool(binary),
+    ~base64?,
+    ~binary?,
     ~date=?dateFromString(date),
     ~compression=?fromCompression(compression),
     ~compressionOptions?,
     ~comment?,
-    ~optimizedBinaryString=?fromBool(optimizedBinaryString),
-    ~createFolders=?fromBool(createFolders),
+    ~optimizedBinaryString?,
+    ~createFolders?,
     ~unixPermissions?,
     ~dosPermissions?,
-    ~dir=?fromBool(dir),
+    ~dir?,
     (),
   );
 
 let makeCompressionOptions = lvl => makeCompressionOptionsAux(~level=lvl, ());
 
 [@bs.obj]
-external makeAsyncBlobOptionsAux :
+external makeAsyncBlobOptionsAux:
   (
     ~_type: [@bs.as "blob"] _,
     ~compression: string=?,
@@ -77,15 +77,15 @@ external makeAsyncBlobOptionsAux :
     ~mimeType: string=?,
     ~platform: string=?,
     ~encodeFileName: string => Js.Typed_array.Uint8Array.t=?,
-    ~streamFiles: Js.boolean=?,
-    ~createFolders: Js.boolean=?,
+    ~streamFiles: bool=?,
+    ~createFolders: bool=?,
     unit
   ) =>
   asyncBlobOptions =
   "";
 
 [@bs.obj]
-external makeAsyncStringOptionsAux :
+external makeAsyncStringOptionsAux:
   (
     ~_type: [@bs.as "uint8array"] _,
     ~compression: string=?,
@@ -94,15 +94,15 @@ external makeAsyncStringOptionsAux :
     ~mimeType: string=?,
     ~platform: string=?,
     ~encodeFileName: string => Js.Typed_array.Uint8Array.t=?,
-    ~streamFiles: Js.boolean=?,
-    ~createFolders: Js.boolean=?,
+    ~streamFiles: bool=?,
+    ~createFolders: bool=?,
     unit
   ) =>
   asyncStringOptions =
   "";
 
 [@bs.obj]
-external makeAsyncUint8OptionsAux :
+external makeAsyncUint8OptionsAux:
   (
     ~_type: [@bs.as "uint8array"] _,
     ~compression: string=?,
@@ -111,8 +111,8 @@ external makeAsyncUint8OptionsAux :
     ~mimeType: string=?,
     ~platform: string=?,
     ~encodeFileName: string => Js.Typed_array.Uint8Array.t=?,
-    ~streamFiles: Js.boolean=?,
-    ~createFolders: Js.boolean=?,
+    ~streamFiles: bool=?,
+    ~createFolders: bool=?,
     unit
   ) =>
   asyncUint8Options =
@@ -138,8 +138,8 @@ let makeAsyncBlobOptions =
     ~mimeType=?fromMimeTypes(mimeType),
     ~platform=?fromPlatforms(platform),
     ~encodeFileName?,
-    ~streamFiles=?fromBool(streamFiles),
-    ~createFolders=?fromBool(createFolders),
+    ~streamFiles?,
+    ~createFolders?,
     (),
   );
 
@@ -163,8 +163,8 @@ let makeAsyncStringOptions =
     ~mimeType=?fromMimeTypes(mimeType),
     ~platform=?fromPlatforms(platform),
     ~encodeFileName?,
-    ~streamFiles=?fromBool(streamFiles),
-    ~createFolders=?fromBool(createFolders),
+    ~streamFiles?,
+    ~createFolders?,
     (),
   );
 
@@ -188,18 +188,18 @@ let makeAsyncUint8Options =
     ~mimeType=?fromMimeTypes(mimeType),
     ~platform=?fromPlatforms(platform),
     ~encodeFileName?,
-    ~streamFiles=?fromBool(streamFiles),
-    ~createFolders=?fromBool(createFolders),
+    ~streamFiles?,
+    ~createFolders?,
     (),
   );
 
 [@bs.obj]
-external makeLoadOptionsAux :
+external makeLoadOptionsAux:
   (
-    ~base64: Js.boolean=?,
-    ~checkCRC32: Js.boolean=?,
-    ~optimizedBinaryString: Js.boolean=?,
-    ~createFolders: Js.boolean=?,
+    ~base64: bool=?,
+    ~checkCRC32: bool=?,
+    ~optimizedBinaryString: bool=?,
+    ~createFolders: bool=?,
     ~decodeFileName: Js.Typed_array.Uint8Array.t => string=?,
     unit
   ) =>
@@ -216,10 +216,10 @@ let makeLoadOptions =
       (),
     ) =>
   makeLoadOptionsAux(
-    ~base64=?fromBool(base64),
-    ~checkCRC32=?fromBool(checkCRC32),
-    ~optimizedBinaryString=?fromBool(optimizedBinaryString),
-    ~createFolders=?fromBool(createFolders),
+    ~base64?,
+    ~checkCRC32?,
+    ~optimizedBinaryString?,
+    ~createFolders?,
     ~decodeFileName?,
     (),
   );
