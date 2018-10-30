@@ -11,7 +11,7 @@ type endings = [ | `native | `transparent];
 external createAux : (array('a), ~options: blobOptions=?, unit) => blob =
   "Blob";
 
-[@bs.send] external isClosed : blob => Js.boolean = "isClosed";
+[@bs.send] external isClosed : blob => bool = "isClosed";
 
 [@bs.send] external size : blob => int = "size";
 

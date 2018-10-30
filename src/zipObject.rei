@@ -1,7 +1,7 @@
 type t = {
   .
   "name": string,
-  "dir": Js.boolean,
+  "dir": bool,
   "date": Js.Date.t,
   "comment": string,
   "unixPermissions": int,

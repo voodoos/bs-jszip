@@ -9,7 +9,7 @@ let create: (~options: blobOptions=?, array('a)) => t;
 let makeOptions:
   (~type_: Mime.types=?, ~endings: endings=?, unit) => blobOptions;
 
-let isClosed: t => Js.boolean;
+let isClosed: t => bool;
 
 let size: t => int;
 
